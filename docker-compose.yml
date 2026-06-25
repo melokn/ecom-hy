@@ -1,0 +1,18 @@
+services:
+  postgresql:
+    image: docker.io/bitnami/postgresql:17
+    restart: always
+    container_name: postgresql_server
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgresql_data:/bitnami/postgresql'
+    environment:
+      POSTGRESQL_USERNAME: holy_insanity_adm
+      POSTGRESQL_PASSWORD: pass123
+      POSTGRESQL_DATABASE: hyadm
+
+
+volumes:
+  postgresql_data:
+    driver: local
