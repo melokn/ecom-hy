@@ -14,7 +14,7 @@ public class ProductVariantDTO {
 
    private long id;
    @NotBlank
-   private ProductModel productId;
+   private long productId;
    @NotBlank
     private String size;
    @NotBlank
